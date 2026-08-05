@@ -1,5 +1,5 @@
 export const company = {
-  name: "Emmenez-moi Sàrl",
+  name: "Emmenez-moi\u00A0Sàrl",
   address: {
     street: "Route de Chevrens 145",
     postalCode: "1247",

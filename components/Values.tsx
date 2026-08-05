@@ -5,7 +5,7 @@ const values = [
   },
   {
     title: "Disponibilité",
-    text: "Une prise en charge possible 7 jours sur 7, y compris en soirée et le week-end, selon les réservations et les disponibilités.",
+    text: "Une prise en charge possible 7\u00A0jours\u00A0sur\u00A07, y compris en soirée et le week-end, selon les réservations et les disponibilités.",
   },
   {
     title: "Fiabilité",

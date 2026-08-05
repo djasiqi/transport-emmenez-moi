@@ -5,7 +5,7 @@ import { useId, useState } from "react";
 const faqs = [
   {
     q: "Intervenez-vous uniquement à Genève ?",
-    a: "Emmenez-moi Sàrl intervient principalement dans les cantons de Genève et de Vaud. D’autres destinations peuvent être étudiées sur demande.",
+    a: "Emmenez-moi\u00A0Sàrl intervient principalement dans les cantons de Genève et de Vaud. D’autres destinations peuvent être étudiées sur demande.",
   },
   {
     q: "Transportez-vous les personnes en fauteuil roulant ?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Travaillez-vous le soir et le week-end ?",
-    a: "Le service est disponible 7 jours sur 7, y compris en soirée et le week-end, selon les réservations et les disponibilités.",
+    a: "Le service est disponible 7\u00A0jours\u00A0sur\u00A07, y compris en soirée et le week-end, selon les réservations et les disponibilités.",
   },
   {
     q: "Comment obtenir un tarif ?",

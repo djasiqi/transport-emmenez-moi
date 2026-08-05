@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { bookingHref } from "@/lib/booking";
 import { company } from "@/lib/company";
 
 export default function ServiceArea() {
@@ -7,7 +8,10 @@ export default function ServiceArea() {
       <div className="mx-auto max-w-6xl">
         <p className="section-kicker">Zones</p>
         <h2 className="section-title">Nos principales zones d’intervention</h2>
-        <p className="section-lead">Emmenez-moi Sàrl intervient principalement dans :</p>
+        <p className="section-lead">
+          <span className="whitespace-nowrap">Emmenez-moi&nbsp;Sàrl</span> intervient
+          principalement dans :
+        </p>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {company.serviceAreas.map((area) => (
@@ -27,7 +31,7 @@ export default function ServiceArea() {
           D’autres destinations peuvent être étudiées selon les besoins, la distance et les
           disponibilités.
         </p>
-        <Link href="/#reservation" className="btn-primary mt-8">
+        <Link href={bookingHref()} className="btn-primary mt-8">
           Demander un trajet
         </Link>
       </div>

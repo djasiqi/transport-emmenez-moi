@@ -9,7 +9,7 @@ export default function LirieConnection() {
             <p className="section-kicker">Coordination</p>
             <h2 className="section-title">Une coordination simplifiée avec LIRIE</h2>
             <p className="mt-4 text-lg leading-relaxed text-foreground">
-              Emmenez-moi Sàrl s’inscrit également dans une démarche de modernisation de la
+              Emmenez-moi&nbsp;Sàrl s’inscrit également dans une démarche de modernisation de la
               coordination des transports grâce à LIRIE, une plateforme suisse dédiée aux
               échanges entre les établissements de santé et les entreprises de transport.
             </p>
@@ -19,7 +19,7 @@ export default function LirieConnection() {
               les échanges liés à chaque transport.
             </p>
             <p className="mt-3 text-lg leading-relaxed text-muted">
-              Le transport reste pris en charge par Emmenez-moi Sàrl selon les modalités
+              Le transport reste pris en charge par Emmenez-moi&nbsp;Sàrl selon les modalités
               convenues avec l’établissement.
             </p>
             <a

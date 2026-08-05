@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { bookingHref } from "@/lib/booking";
 import { company } from "@/lib/company";
 
 export default function Hero() {
@@ -35,12 +36,13 @@ export default function Hero() {
 
           <p className="max-w-lg text-lg leading-relaxed text-white/92 sm:text-xl">
             Des chauffeurs formés dans le domaine des soins vous conduisent à Genève et dans le
-            canton de Vaud, 7 jours sur 7.
+            canton de Vaud,{" "}
+            <span className="whitespace-nowrap">7&nbsp;jours&nbsp;sur&nbsp;7</span>.
           </p>
 
           <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
             <Link
-              href="/#reservation"
+              href={bookingHref()}
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 py-3 text-base font-semibold text-brand-blue shadow-[0_10px_30px_rgba(0,0,0,0.22)] transition hover:-translate-y-0.5 hover:bg-brand-blue-tint"
             >
               Réserver un transport

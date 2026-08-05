@@ -14,7 +14,7 @@ export default function Institutions() {
             Vous représentez une institution ou un professionnel de santé ?
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-relaxed text-foreground">
-            Emmenez-moi Sàrl accompagne également les établissements de santé, les structures
+            Emmenez-moi&nbsp;Sàrl accompagne également les établissements de santé, les structures
             médico-sociales, les curateurs et les professionnels chargés d’organiser les
             déplacements de leurs patients, résidents ou bénéficiaires.
           </p>

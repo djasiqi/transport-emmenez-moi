@@ -4,7 +4,7 @@ const items = [
   { label: `Depuis ${company.foundedYear}`, detail: "Entreprise genevoise" },
   { label: "Chauffeurs formés", detail: "Domaine des soins" },
   { label: "Véhicule adapté", detail: "Prise en charge PMR" },
-  { label: "7 jours sur 7", detail: "Soirs et week-end" },
+  { label: "7\u00A0jours\u00A0sur\u00A07", detail: "Soirs et week-end" },
 ] as const;
 
 export default function TrustBar() {

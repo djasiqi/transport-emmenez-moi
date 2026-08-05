@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useSyncExternalStore } from "react";
+import { bookingHref } from "@/lib/booking";
 
 const links = [
   { href: "/", label: "Accueil" },
@@ -60,13 +61,13 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Link href="/#reservation" className="btn-primary ml-3 px-5 py-2.5 text-[0.95rem]">
+          <Link href={bookingHref()} className="btn-primary ml-3 px-5 py-2.5 text-[0.95rem]">
             Réserver
           </Link>
         </nav>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <Link href="/#reservation" className="btn-primary px-4 py-2 text-sm">
+          <Link href={bookingHref()} className="btn-primary px-4 py-2 text-sm">
             Réserver
           </Link>
           <button

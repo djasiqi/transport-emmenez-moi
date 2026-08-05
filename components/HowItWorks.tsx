@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { bookingHref } from "@/lib/booking";
+
 const steps = [
   {
     n: "1",
@@ -12,7 +15,12 @@ const steps = [
   {
     n: "3",
     title: "Recevez notre confirmation",
-    text: "Emmenez-moi Sàrl vous recontacte afin de confirmer la disponibilité et les modalités de la prise en charge.",
+    text: (
+      <>
+        <span className="whitespace-nowrap">Emmenez-moi&nbsp;Sàrl</span> vous recontacte afin de
+        confirmer la disponibilité et les modalités de la prise en charge.
+      </>
+    ),
   },
   {
     n: "4",
@@ -47,9 +55,14 @@ export default function HowItWorks() {
           ))}
         </ol>
 
-        <p className="mt-8 rounded-xl border border-brand-blue/15 bg-brand-blue-tint/70 px-5 py-4 text-base text-brand-blue-deep">
-          L’envoi d’une demande ne vaut pas confirmation définitive du transport.
-        </p>
+        <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="rounded-xl border border-brand-blue/15 bg-brand-blue-tint/70 px-5 py-4 text-base text-brand-blue-deep">
+            L’envoi d’une demande ne vaut pas confirmation définitive du transport.
+          </p>
+          <Link href={bookingHref()} className="btn-primary shrink-0">
+            Remplir le formulaire
+          </Link>
+        </div>
       </div>
     </section>
   );
