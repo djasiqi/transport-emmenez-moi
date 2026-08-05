@@ -27,7 +27,7 @@ export default function Institutions() {
               Échanger sur vos besoins
             </Link>
             <Link href="/#coordination" className="btn-secondary">
-              Découvrir la coordination avec LIRIE
+              Voir la coordination LIRIE
             </Link>
           </div>
         </div>

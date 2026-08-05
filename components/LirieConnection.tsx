@@ -1,70 +1,96 @@
+import Link from "next/link";
 import { company } from "@/lib/company";
+
+const points = [
+  {
+    title: "Demandes centralisées",
+    text: "Une seule plateforme pour transmettre les trajets et les informations utiles.",
+  },
+  {
+    title: "Suivi clair",
+    text: "Les échanges et l’avancement restent accessibles aux acteurs habilités.",
+  },
+  {
+    title: "Rôles distincts",
+    text: "LIRIE coordonne ; Emmenez-moi\u00A0Sàrl réalise le transport accompagné.",
+  },
+] as const;
 
 export default function LirieConnection() {
   return (
-    <section id="coordination" className="section-pad scroll-mt-24 bg-surface">
+    <section id="coordination" className="section-pad scroll-mt-24">
       <div className="mx-auto max-w-6xl">
-        <div className="grid items-center gap-8 rounded-[1.75rem] border border-border bg-page-bg p-8 lg:grid-cols-[1.2fr_0.8fr] lg:p-10">
-          <div>
-            <p className="section-kicker">Coordination</p>
-            <h2 className="section-title">Une coordination simplifiée avec LIRIE</h2>
-            <p className="mt-4 text-lg leading-relaxed text-foreground">
-              Emmenez-moi&nbsp;Sàrl s’inscrit également dans une démarche de modernisation de la
-              coordination des transports grâce à LIRIE, une plateforme suisse dédiée aux
-              échanges entre les établissements de santé et les entreprises de transport.
-            </p>
-            <p className="mt-3 text-lg leading-relaxed text-muted">
-              Pour les institutions partenaires, LIRIE permet notamment de centraliser les
-              demandes, suivre leur évolution, transmettre les informations utiles et faciliter
-              les échanges liés à chaque transport.
-            </p>
-            <p className="mt-3 text-lg leading-relaxed text-muted">
-              Le transport reste pris en charge par Emmenez-moi&nbsp;Sàrl selon les modalités
-              convenues avec l’établissement.
-            </p>
-            <a
-              href={company.lirieUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary mt-8"
-            >
-              Découvrir LIRIE
-            </a>
-          </div>
-          <div className="rounded-2xl border border-brand-blue/15 bg-white p-6 shadow-[var(--shadow-soft)]">
-            <a
-              href={company.lirieUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex"
-              aria-label="Découvrir LIRIE"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/logo-lirie.png"
-                alt="Logo LIRIE"
-                width={180}
-                height={78}
-                className="h-14 w-auto"
-              />
-            </a>
-            <p className="mt-4 text-xl font-semibold tracking-tight text-brand-blue-deep">
-              Plateforme de coordination
-            </p>
-            <ul className="mt-5 space-y-3 text-base text-muted">
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />
-                Centralisation des demandes
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />
-                Suivi et traçabilité des échanges
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />
-                Lien établissements ↔ transporteurs
-              </li>
-            </ul>
+        <div className="relative overflow-hidden rounded-[1.75rem] border border-border bg-white">
+          <div
+            className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[linear-gradient(135deg,transparent_0%,#eef5fa_48%,#e3eef6_100%)] lg:block"
+            aria-hidden="true"
+          />
+
+          <div className="relative grid gap-10 p-8 sm:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12 lg:p-12">
+            <div>
+              <p className="section-kicker">Pour les institutions</p>
+              <h2 className="section-title">Coordination simplifiée avec LIRIE</h2>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
+                Emmenez-moi&nbsp;Sàrl s’appuie aussi sur{" "}
+                <span className="font-semibold text-foreground">LIRIE</span>, une plateforme
+                suisse qui facilite les échanges entre établissements de santé et entreprises de
+                transport.
+              </p>
+              <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">
+                Le transport reste assuré par Emmenez-moi&nbsp;Sàrl, selon les modalités convenues
+                avec l’établissement.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a
+                  href={company.lirieUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Découvrir LIRIE
+                </a>
+                <Link href="/#contact" className="btn-secondary">
+                  Contacter Emmenez-moi
+                </Link>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <a
+                href={company.lirieUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-xl border border-border bg-white px-4 py-3 shadow-[var(--shadow-soft)] transition hover:-translate-y-0.5"
+                aria-label="Visiter le site LIRIE"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/logo-lirie.png"
+                  alt="Logo LIRIE"
+                  width={200}
+                  height={86}
+                  className="h-12 w-auto sm:h-14"
+                />
+              </a>
+
+              <ul className="space-y-4">
+                {points.map((point) => (
+                  <li key={point.title} className="flex gap-3">
+                    <span
+                      className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--lirie-teal,#00796B)]"
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <p className="font-semibold tracking-tight text-brand-blue-deep">
+                        {point.title}
+                      </p>
+                      <p className="mt-0.5 text-base leading-relaxed text-muted">{point.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
