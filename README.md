@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site web — Emmenez-moi Sàrl
 
-## Getting Started
+Reproduction fidèle du site de transport de personnes à mobilité réduite, déployée sur Vercel.
 
-First, run the development server:
+Site source de référence : [https://www.transport-emmenez-moi.ch/](https://www.transport-emmenez-moi.ch/)
+
+Dépôt GitHub : [https://github.com/djasiqi/transport-emmenez-moi](https://github.com/djasiqi/transport-emmenez-moi)
+
+## Installation locale
+
+Prérequis : Node.js 20+ et npm.
+
+```bash
+npm install
+cp .env.example .env.local
+```
+
+Renseignez `RESEND_API_KEY` dans `.env.local` (voir section Resend).
+
+## Développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build de production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+npm start
+```
 
-## Learn More
+## Variables d’environnement
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Description |
+| --- | --- |
+| `RESEND_API_KEY` | Clé API Resend (serveur uniquement) |
+| `CONTACT_TO_EMAIL` | Destinataire du formulaire (`info@casa-famiglia.ch`) |
+| `NEXT_PUBLIC_SITE_URL` | URL canonique (SEO), optionnelle |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ne jamais committer `.env` / `.env.local`. Utiliser `.env.example` comme modèle sans secrets.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Formulaire de contact
 
-## Deploy on Vercel
+Le formulaire envoie un `POST` vers `/api/contact`. Les messages sont transmis via Resend à `info@casa-famiglia.ch`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Configuration Resend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Créer un compte sur [https://resend.com](https://resend.com)
+2. Générer une clé API
+3. Ajouter `RESEND_API_KEY` dans `.env.local` (local) et dans les Environment Variables du projet Vercel
+4. En production, vérifier un domaine d’envoi dans Resend et adapter l’adresse `from` dans `app/api/contact/route.ts` si nécessaire
+
+Tant qu’aucun domaine n’est vérifié, Resend peut limiter l’envoi (domaine d’essai `onboarding@resend.dev`).
+
+## Déploiement Vercel (`*.vercel.app`)
+
+1. Importer le dépôt `djasiqi/transport-emmenez-moi` dans Vercel
+2. Framework : Next.js (détection automatique)
+3. Configurer les variables d’environnement (`RESEND_API_KEY`, `CONTACT_TO_EMAIL`)
+4. Déployer
+5. Vérifier l’URL `*.vercel.app`
+
+**Priorité :** obtenir une URL Vercel fonctionnelle **avant le 19 août 2026** (fin d’hébergement MyWEBSITE / Local Search).
+
+## Domaines personnalisés (après transfert uniquement)
+
+Ne **pas** ajouter prématurément :
+
+- `transport-emmenez-moi.ch`
+- `www.transport-emmenez-moi.ch`
+
+Attendre la fin du transfert DomainPrice / SWITCH, puis :
+
+1. Ajouter les domaines dans Vercel → Project → Domains
+2. Appliquer les enregistrements DNS exacts affichés par Vercel
+
+Valeurs **indicatives** (à confirmer dans le tableau de bord Vercel) :
+
+```text
+@     A       76.76.21.21
+www   CNAME   cname.vercel-dns.com
+```
+
+## Transfert DomainPrice (étapes génériques)
+
+1. Ouvrir un compte DomainPrice / GoDaddy
+2. Lancer le transfert du domaine `.ch`
+3. Utiliser le code AuthInfo reçu séparément par email et le saisir directement dans l’interface sécurisée de DomainPrice. Ne jamais enregistrer ce code dans le dépôt Git.
+4. Payer le transfert / renouvellement
+5. Attendre la confirmation SWITCH
+6. Une fois le domaine disponible chez le nouveau registrar, configurer le DNS vers Vercel (voir ci-dessus)
+
+## Coordonnées figées (ne pas modifier)
+
+- Entreprise : Emmenez-moi Sàrl
+- Adresse : Route de Chevrens 145, 1247 Anières
+- Bureau : 022 512 02 03
+- Chauffeur : 079 291 50 37
+- Formulaire : info@casa-famiglia.ch
+
+## Pages
+
+- `/` — page d’accueil
+- `/mentions-legales`
+- `/protection-des-donnees`
+
+Les pages légales portent une mention de validation juridique recommandée.
