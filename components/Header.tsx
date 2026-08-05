@@ -8,8 +8,8 @@ import { bookingHref } from "@/lib/booking";
 const links = [
   { href: "/", label: "Accueil" },
   { href: "/#services", label: "Nos services" },
-  { href: "/#a-propos", label: "À propos" },
   { href: "/#engagements", label: "Nos engagements" },
+  { href: "/#a-propos", label: "À propos" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#contact", label: "Contact" },
 ] as const;
