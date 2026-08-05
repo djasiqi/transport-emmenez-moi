@@ -56,41 +56,22 @@ export default function LirieConnection() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <a
-                href={company.lirieUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-xl border border-border bg-white px-4 py-3 shadow-[var(--shadow-soft)] transition hover:-translate-y-0.5"
-                aria-label="Visiter le site LIRIE"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/logo-lirie.png"
-                  alt="Logo LIRIE"
-                  width={200}
-                  height={86}
-                  className="h-12 w-auto sm:h-14"
-                />
-              </a>
-
-              <ul className="space-y-4">
-                {points.map((point) => (
-                  <li key={point.title} className="flex gap-3">
-                    <span
-                      className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--lirie-teal,#00796B)]"
-                      aria-hidden="true"
-                    />
-                    <div>
-                      <p className="font-semibold tracking-tight text-brand-blue-deep">
-                        {point.title}
-                      </p>
-                      <p className="mt-0.5 text-base leading-relaxed text-muted">{point.text}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="space-y-4">
+              {points.map((point) => (
+                <li key={point.title} className="flex gap-3">
+                  <span
+                    className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--lirie-teal,#00796B)]"
+                    aria-hidden="true"
+                  />
+                  <div>
+                    <p className="font-semibold tracking-tight text-brand-blue-deep">
+                      {point.title}
+                    </p>
+                    <p className="mt-0.5 text-base leading-relaxed text-muted">{point.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
