@@ -3,24 +3,26 @@ import { company } from "@/lib/company";
 
 export default function ServiceArea() {
   return (
-    <section className="section-pad bg-surface">
+    <section className="section-pad">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold tracking-tight text-brand-blue sm:text-4xl">
-          Nos principales zones d’intervention
-        </h2>
-        <p className="mt-3 text-lg text-muted">
-          Emmenez-moi Sàrl intervient principalement dans :
-        </p>
-        <ul className="mt-6 flex flex-col gap-3 sm:flex-row sm:gap-6">
+        <p className="section-kicker">Zones</p>
+        <h2 className="section-title">Nos principales zones d’intervention</h2>
+        <p className="section-lead">Emmenez-moi Sàrl intervient principalement dans :</p>
+
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {company.serviceAreas.map((area) => (
             <li
               key={area}
-              className="card flex min-w-[12rem] items-center justify-center py-6 text-xl font-semibold text-brand-blue"
+              className="card flex min-h-32 flex-col items-start justify-center bg-[linear-gradient(160deg,#ffffff_0%,#eef5fa_100%)]"
             >
-              Canton de {area}
+              <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue-soft">
+                Canton
+              </p>
+              <p className="mt-1 text-3xl font-bold tracking-tight text-brand-blue-deep">{area}</p>
             </li>
           ))}
         </ul>
+
         <p className="mt-6 max-w-2xl text-base text-muted">
           D’autres destinations peuvent être étudiées selon les besoins, la distance et les
           disponibilités.

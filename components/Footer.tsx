@@ -6,15 +6,24 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-brand-blue text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-3">
+    <footer className="relative overflow-hidden bg-[linear-gradient(165deg,var(--brand-blue-deep)_0%,var(--brand-blue)_55%,#0a6aad_100%)] text-white">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-30"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 85% 10%, rgba(124,172,196,0.45), transparent 35%)",
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3">
         <div className="space-y-4">
           <Image
             src="/logo-emmenez-moi.jpg"
             alt=""
             width={180}
             height={40}
-            className="h-10 w-auto rounded bg-white p-1"
+            className="h-10 w-auto rounded-md bg-white p-1.5"
           />
           <p className="text-base leading-relaxed text-white/90">
             Transport accompagné pour les personnes à mobilité réduite à Genève et dans le
@@ -30,8 +39,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="mb-3 text-lg font-semibold">Contact</p>
-          <ul className="space-y-2 text-base text-white/90">
+          <p className="mb-4 text-lg font-semibold">Contact</p>
+          <ul className="space-y-3 text-base text-white/90">
             <li>
               Bureau :{" "}
               <a href={company.officePhoneHref} className="underline underline-offset-2">
@@ -54,8 +63,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="mb-3 text-lg font-semibold">Informations</p>
-          <ul className="space-y-2 text-base text-white/90">
+          <p className="mb-4 text-lg font-semibold">Informations</p>
+          <ul className="space-y-3 text-base text-white/90">
             <li>
               <Link href="/mentions-legales" className="underline underline-offset-2">
                 Mentions légales
@@ -80,7 +89,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="border-t border-white/20 py-5 text-center text-sm text-white/75">
+      <p className="relative border-t border-white/15 py-5 text-center text-sm text-white/75">
         © {year} {company.name}. Tous droits réservés.
       </p>
     </footer>

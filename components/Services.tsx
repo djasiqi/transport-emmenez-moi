@@ -29,22 +29,26 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="section-pad scroll-mt-24 bg-surface">
+    <section id="services" className="section-pad scroll-mt-24">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold tracking-tight text-brand-blue sm:text-4xl">
-          Nos services de transport
-        </h2>
-        <p className="mt-3 max-w-2xl text-lg text-muted">
+        <p className="section-kicker">Services</p>
+        <h2 className="section-title">Nos services de transport</h2>
+        <p className="section-lead">
           Des solutions adaptées aux besoins de mobilité, pour les particuliers comme pour les
           situations organisées avec une institution.
         </p>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <article key={service.title} className="card flex flex-col gap-4">
-              <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <article key={service.title} className="card card-interactive flex flex-col gap-4">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-blue-tint text-sm font-bold text-brand-blue">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="text-xl font-semibold tracking-tight text-foreground">
+                {service.title}
+              </h3>
               <p className="flex-1 text-base leading-relaxed text-muted">{service.text}</p>
-              <Link href="/#reservation" className="btn-ghost self-start px-0">
+              <Link href="/#reservation" className="btn-ghost self-start">
                 Demander ce transport
               </Link>
             </article>

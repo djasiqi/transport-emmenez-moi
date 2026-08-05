@@ -34,23 +34,29 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="section-pad scroll-mt-24 bg-page-bg">
+    <section id="faq" className="section-pad scroll-mt-24 bg-surface">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-3xl font-bold tracking-tight text-brand-blue sm:text-4xl">
-          Questions fréquentes
-        </h2>
-        <p className="mt-3 text-lg text-muted">
+        <p className="section-kicker">FAQ</p>
+        <h2 className="section-title">Questions fréquentes</h2>
+        <p className="section-lead">
           Les réponses aux demandes les plus courantes avant une réservation.
         </p>
 
-        <div className="mt-8 space-y-3">
+        <div className="mt-10 space-y-3">
           {faqs.map((item, index) => {
             const panelId = `${baseId}-panel-${index}`;
             const buttonId = `${baseId}-button-${index}`;
             const isOpen = openIndex === index;
 
             return (
-              <div key={item.q} className="card overflow-hidden p-0">
+              <div
+                key={item.q}
+                className={`overflow-hidden rounded-2xl border transition ${
+                  isOpen
+                    ? "border-brand-blue/25 bg-white shadow-[var(--shadow-soft)]"
+                    : "border-border bg-page-bg"
+                }`}
+              >
                 <h3>
                   <button
                     id={buttonId}
@@ -61,7 +67,12 @@ export default function Faq() {
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
                     {item.q}
-                    <span aria-hidden="true" className="text-brand-blue">
+                    <span
+                      aria-hidden="true"
+                      className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-brand-blue transition ${
+                        isOpen ? "bg-brand-blue-tint rotate-0" : "bg-white"
+                      }`}
+                    >
                       {isOpen ? "−" : "+"}
                     </span>
                   </button>

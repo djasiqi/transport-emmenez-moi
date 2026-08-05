@@ -1,26 +1,23 @@
 import { company } from "@/lib/company";
 
 const items = [
-  `Depuis ${company.foundedYear}`,
-  "Chauffeurs formés dans le domaine des soins",
-  "Véhicule adapté",
-  "Service 7 jours sur 7",
+  { label: `Depuis ${company.foundedYear}`, detail: "Entreprise genevoise" },
+  { label: "Chauffeurs formés", detail: "Domaine des soins" },
+  { label: "Véhicule adapté", detail: "Prise en charge PMR" },
+  { label: "7 jours sur 7", detail: "Soirs et week-end" },
 ] as const;
 
 export default function TrustBar() {
   return (
-    <section className="border-b border-border bg-surface" aria-label="Points de confiance">
-      <ul className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 sm:px-6 sm:py-6">
+    <section className="relative z-10 -mt-6 px-4 sm:-mt-8 sm:px-6" aria-label="Points de confiance">
+      <ul className="mx-auto grid max-w-6xl gap-3 rounded-2xl border border-border/80 bg-white/95 p-3 shadow-[0_16px_50px_rgba(1,82,145,0.12)] backdrop-blur sm:grid-cols-2 sm:gap-2 lg:grid-cols-4 lg:p-2">
         {items.map((item) => (
           <li
-            key={item}
-            className="flex items-center gap-2 text-base font-medium text-foreground sm:text-[1.05rem]"
+            key={item.label}
+            className="rounded-xl px-4 py-3.5 text-center sm:text-left lg:px-5"
           >
-            <span
-              className="inline-block h-2 w-2 shrink-0 rounded-full bg-brand-blue"
-              aria-hidden="true"
-            />
-            {item}
+            <p className="text-base font-bold text-brand-blue-deep">{item.label}</p>
+            <p className="mt-0.5 text-sm text-muted">{item.detail}</p>
           </li>
         ))}
       </ul>

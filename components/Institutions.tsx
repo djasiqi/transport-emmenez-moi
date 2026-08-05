@@ -2,10 +2,15 @@ import Link from "next/link";
 
 export default function Institutions() {
   return (
-    <section id="institutions" className="section-pad scroll-mt-24 bg-surface">
+    <section id="institutions" className="section-pad scroll-mt-24">
       <div className="mx-auto max-w-6xl">
-        <div className="card border-brand-blue/20 bg-brand-blue-tint/40 p-8 sm:p-10">
-          <h2 className="text-3xl font-bold tracking-tight text-brand-blue sm:text-4xl">
+        <div className="relative overflow-hidden rounded-[1.75rem] border border-brand-blue/15 bg-[linear-gradient(135deg,#eef5fa_0%,#ffffff_55%,#e8f2f8_100%)] p-8 shadow-[var(--shadow-soft)] sm:p-12">
+          <div
+            className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-blue/10"
+            aria-hidden="true"
+          />
+          <p className="section-kicker">Institutions</p>
+          <h2 className="section-title max-w-3xl">
             Vous représentez une institution ou un professionnel de santé ?
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-relaxed text-foreground">

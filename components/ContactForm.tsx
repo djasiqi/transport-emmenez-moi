@@ -14,7 +14,7 @@ const tripTypes = [
 ] as const;
 
 const inputClass =
-  "w-full rounded-lg border border-border bg-white px-3 py-3 text-base text-foreground";
+  "w-full rounded-xl border border-border bg-page-bg px-3.5 py-3 text-base text-foreground transition focus:border-brand-blue focus:bg-white focus:outline-none";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -76,12 +76,13 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="section-pad scroll-mt-24 bg-surface">
-      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-        <aside className="space-y-6">
-          <h2 className="text-3xl font-bold tracking-tight text-brand-blue sm:text-4xl">
-            Contact
-          </h2>
+    <section id="contact" className="section-pad scroll-mt-24">
+      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
+        <aside className="card h-fit space-y-6 bg-[linear-gradient(165deg,#ffffff_0%,#eef5fa_100%)]">
+          <div>
+            <p className="section-kicker">Contact</p>
+            <h2 className="section-title">Nous joindre</h2>
+          </div>
           <div className="space-y-2 text-lg">
             <p className="font-semibold text-foreground">{company.name}</p>
             <p className="text-muted">
@@ -130,14 +131,16 @@ export default function ContactForm() {
             <a href={company.driverPhoneHref} className="btn-primary">
               Appeler le chauffeur
             </a>
-            <a href={company.emailHref} className="btn-ghost px-0">
+            <a href={company.emailHref} className="btn-ghost self-start">
               Envoyer un email
             </a>
           </div>
         </aside>
 
-        <div>
-          <h3 className="text-2xl font-bold text-foreground">Demande de transport</h3>
+        <div className="card">
+          <h3 className="text-2xl font-bold tracking-tight text-brand-blue-deep">
+            Demande de transport
+          </h3>
           <p className="mt-2 text-base text-muted">
             Remplissez le formulaire : nous vous recontacterons pour confirmer la prise en
             charge.

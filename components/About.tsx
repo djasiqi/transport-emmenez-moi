@@ -3,13 +3,11 @@ import { company } from "@/lib/company";
 
 export default function About() {
   return (
-    <section id="a-propos" className="section-pad scroll-mt-24 bg-surface">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+    <section id="a-propos" className="section-pad scroll-mt-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <div className="space-y-5">
-          <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue">
-            Depuis {company.foundedYear}
-          </p>
-          <h2 className="text-3xl font-bold tracking-tight text-brand-blue sm:text-4xl">
+          <p className="section-kicker">À propos</p>
+          <h2 className="section-title">
             Une entreprise genevoise spécialisée dans le transport accompagné
           </h2>
           <p className="text-lg leading-relaxed text-foreground">
@@ -35,22 +33,22 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid gap-4">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border shadow-sm">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)]">
             <Image
               src="/images/vehicule-emmenez-moi.jpg"
               alt="Véhicule Emmenez-moi équipé pour le transport adapté"
               fill
-              className="object-cover"
+              className="object-cover transition duration-500 hover:scale-[1.03]"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border shadow-sm">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)] lg:ml-10 lg:-mt-6">
             <Image
               src="/images/service-accompagnement.jpg"
               alt="Accompagnement personnalisé lors d’un transport Emmenez-moi"
               fill
-              className="object-cover"
+              className="object-cover transition duration-500 hover:scale-[1.03]"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>

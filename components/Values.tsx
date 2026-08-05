@@ -19,20 +19,26 @@ const values = [
 
 export default function Values() {
   return (
-    <section id="engagements" className="section-pad scroll-mt-24 bg-page-bg">
+    <section id="engagements" className="section-pad scroll-mt-24 bg-surface">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold tracking-tight text-brand-blue sm:text-4xl">
-          Nos engagements
-        </h2>
-        <p className="mt-3 max-w-2xl text-lg text-muted">
+        <p className="section-kicker">Engagements</p>
+        <h2 className="section-title">Nos engagements</h2>
+        <p className="section-lead">
           Une prise en charge humaine, sûre et organisée, adaptée aux personnes fragiles.
         </p>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {values.map((value) => (
-            <article key={value.title} className="card border-l-4 border-l-brand-blue">
-              <h3 className="text-xl font-semibold text-brand-blue">{value.title}</h3>
-              <p className="mt-3 text-base leading-relaxed text-muted">{value.text}</p>
+            <article
+              key={value.title}
+              className="card relative overflow-hidden border-l-[3px] border-l-brand-blue pl-6"
+            >
+              <div
+                className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-brand-blue-tint"
+                aria-hidden="true"
+              />
+              <h3 className="relative text-xl font-semibold text-brand-blue-deep">{value.title}</h3>
+              <p className="relative mt-3 text-base leading-relaxed text-muted">{value.text}</p>
             </article>
           ))}
         </div>
