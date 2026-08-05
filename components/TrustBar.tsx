@@ -9,13 +9,10 @@ const items = [
 
 export default function TrustBar() {
   return (
-    <section className="relative z-10 -mt-6 px-4 sm:-mt-8 sm:px-6" aria-label="Points de confiance">
-      <ul className="mx-auto grid max-w-6xl gap-3 rounded-2xl border border-border/80 bg-white/95 p-3 shadow-[0_16px_50px_rgba(1,82,145,0.12)] backdrop-blur sm:grid-cols-2 sm:gap-2 lg:grid-cols-4 lg:p-2">
+    <section className="border-b border-border bg-white" aria-label="Points de confiance">
+      <ul className="mx-auto grid max-w-6xl gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
-          <li
-            key={item.label}
-            className="rounded-xl px-4 py-3.5 text-center sm:text-left lg:px-5"
-          >
+          <li key={item.label} className="bg-white px-5 py-5 sm:px-6 sm:py-6">
             <p className="text-base font-bold text-brand-blue-deep">{item.label}</p>
             <p className="mt-0.5 text-sm text-muted">{item.detail}</p>
           </li>
