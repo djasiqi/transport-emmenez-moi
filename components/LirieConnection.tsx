@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { company } from "@/lib/company";
 
 export default function LirieConnection() {
@@ -32,8 +33,14 @@ export default function LirieConnection() {
             </a>
           </div>
           <div className="rounded-2xl border border-brand-blue/15 bg-white p-6 shadow-[var(--shadow-soft)]">
-            <p className="text-sm font-bold uppercase tracking-wider text-brand-blue">LIRIE</p>
-            <p className="mt-3 text-xl font-semibold tracking-tight text-brand-blue-deep">
+            <Image
+              src="/images/logo-lirie.png"
+              alt="Logo LIRIE"
+              width={160}
+              height={48}
+              className="h-10 w-auto"
+            />
+            <p className="mt-4 text-xl font-semibold tracking-tight text-brand-blue-deep">
               Plateforme de coordination
             </p>
             <ul className="mt-5 space-y-3 text-base text-muted">

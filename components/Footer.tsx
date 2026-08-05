@@ -80,9 +80,18 @@ export default function Footer() {
                 href={company.lirieUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-2"
+                className="group inline-flex flex-col gap-2.5"
               >
-                Coordination institutionnelle avec LIRIE
+                <span className="underline underline-offset-2 group-hover:text-white">
+                  Coordination institutionnelle avec LIRIE
+                </span>
+                <Image
+                  src="/images/logo-lirie.png"
+                  alt="Logo LIRIE"
+                  width={140}
+                  height={40}
+                  className="h-9 w-auto rounded-md bg-white px-2.5 py-1.5"
+                />
               </a>
             </li>
           </ul>
