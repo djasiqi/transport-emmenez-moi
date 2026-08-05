@@ -33,6 +33,7 @@ export const servicePresets: Record<ServiceSlug, FormPreset> = {
   },
   "aller-retour": {
     typeTrajet: "aller-retour",
+    accompagnement: "oui",
     message: "Demande : aller-retour avec attente pendant le rendez-vous.",
   },
   accompagnement: {
