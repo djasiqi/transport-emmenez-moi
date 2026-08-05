@@ -75,22 +75,29 @@ export default function Footer() {
                 Protection des données
               </Link>
             </li>
-            <li>
+            <li className="space-y-3">
               <a
                 href={company.lirieUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex flex-col gap-2.5"
+                className="underline underline-offset-2"
               >
-                <span className="underline underline-offset-2 group-hover:text-white">
-                  Coordination institutionnelle avec LIRIE
-                </span>
-                <Image
+                Coordination institutionnelle avec LIRIE
+              </a>
+              <a
+                href={company.lirieUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-lg bg-white px-3 py-2 shadow-sm transition hover:bg-brand-blue-tint"
+                aria-label="Découvrir LIRIE"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src="/images/logo-lirie.png"
                   alt="Logo LIRIE"
-                  width={140}
-                  height={40}
-                  className="h-9 w-auto rounded-md bg-white px-2.5 py-1.5"
+                  width={148}
+                  height={64}
+                  className="h-12 w-auto"
                 />
               </a>
             </li>
