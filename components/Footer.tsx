@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { company } from "@/lib/company";
 
@@ -5,66 +6,82 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-blue px-4 py-12 text-white">
-      <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div>
-          <p className="mb-3 text-lg font-medium">Adresse</p>
-          <p className="font-light leading-relaxed">
+    <footer className="border-t border-border bg-brand-blue text-white">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-3">
+        <div className="space-y-4">
+          <Image
+            src="/logo-emmenez-moi.jpg"
+            alt=""
+            width={180}
+            height={40}
+            className="h-10 w-auto rounded bg-white p-1"
+          />
+          <p className="text-base leading-relaxed text-white/90">
+            Transport accompagné pour les personnes à mobilité réduite à Genève et dans le
+            canton de Vaud.
+          </p>
+          <p className="text-base text-white/85">
             {company.name}
             <br />
-            {company.street}
+            {company.address.street}
             <br />
-            {company.city}
+            {company.address.postalCode} {company.address.city}
           </p>
         </div>
 
         <div>
-          <p className="mb-3 text-lg font-medium">Téléphones</p>
-          <p className="font-light leading-relaxed">
-            Bureau:{" "}
-            <a href={company.phoneBureauHref} className="underline hover:text-white/90">
-              {company.phoneBureauDisplay.replace(/ /g, "")}
-            </a>
-            <br />
-            Réservation Chauffeur:{" "}
-            <a href={company.phoneChauffeurHref} className="underline hover:text-white/90">
-              {company.phoneChauffeurDisplay}
-            </a>
-          </p>
-          <p className="mt-4 font-light">
-            E-mail{" "}
-            <a href={company.emailHref} className="underline hover:text-white/90">
-              {company.email}
-            </a>
-          </p>
-          <p className="mt-4 font-light">
-            Administration interne
-            <br />
-            <a href={company.emailHref} className="underline hover:text-white/90">
-              {company.email}
-            </a>
-          </p>
-        </div>
-
-        <div>
-          <p className="mb-3 text-lg font-medium">Informations juridiques</p>
-          <ul className="space-y-2 font-light">
+          <p className="mb-3 text-lg font-semibold">Contact</p>
+          <ul className="space-y-2 text-base text-white/90">
             <li>
-              <Link href="/mentions-legales" className="underline hover:text-white/90">
+              Bureau :{" "}
+              <a href={company.officePhoneHref} className="underline underline-offset-2">
+                {company.officePhoneDisplay}
+              </a>
+            </li>
+            <li>
+              Réservation chauffeur :{" "}
+              <a href={company.driverPhoneHref} className="underline underline-offset-2">
+                {company.driverPhoneDisplay}
+              </a>
+            </li>
+            <li>
+              Email :{" "}
+              <a href={company.emailHref} className="underline underline-offset-2">
+                {company.email}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="mb-3 text-lg font-semibold">Informations</p>
+          <ul className="space-y-2 text-base text-white/90">
+            <li>
+              <Link href="/mentions-legales" className="underline underline-offset-2">
                 Mentions légales
               </Link>
             </li>
             <li>
-              <Link href="/protection-des-donnees" className="underline hover:text-white/90">
-                Déclaration relative à la protection des données
+              <Link href="/protection-des-donnees" className="underline underline-offset-2">
+                Protection des données
               </Link>
+            </li>
+            <li>
+              <a
+                href={company.lirieUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                Coordination institutionnelle avec LIRIE
+              </a>
             </li>
           </ul>
         </div>
       </div>
 
-      <p className="mx-auto mt-10 max-w-6xl border-t border-white/20 pt-6 text-center text-sm font-light text-white/80">
-        © {year} {company.name}
+      <p className="border-t border-white/20 py-5 text-center text-sm text-white/75">
+        © {year} {company.name}. Tous droits réservés.
       </p>
     </footer>
   );

@@ -8,130 +8,129 @@ export const metadata: Metadata = {
   alternates: { canonical: "/protection-des-donnees" },
 };
 
+const UPDATED = "5 août 2026";
+
 export default function ProtectionDesDonneesPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <h1 className="mb-6 text-3xl font-bold text-brand-blue">
-        Déclaration relative à la protection des données
-      </h1>
-
-      <p className="mb-8 rounded border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-950">
-        Ce contenu est un modèle informatif à valider par l&apos;entreprise ou un conseil
-        juridique avant publication définitive.
+      <p className="mb-6">
+        <Link href="/" className="text-base font-semibold text-brand-blue underline underline-offset-2">
+          ← Retour à l’accueil
+        </Link>
       </p>
 
-      <div className="space-y-8 text-base font-light leading-relaxed">
+      <h1 className="mb-2 text-3xl font-bold text-brand-blue sm:text-4xl">
+        Déclaration relative à la protection des données
+      </h1>
+      <p className="mb-10 text-sm text-muted">Dernière mise à jour : {UPDATED}</p>
+
+      <div className="space-y-8 text-base leading-relaxed text-foreground sm:text-lg">
         <section>
-          <h2 className="mb-2 text-xl font-medium">Responsable du traitement</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Responsable du traitement</h2>
           <p>
             {company.name}
             <br />
-            {company.street}
+            {company.address.street}
             <br />
-            {company.city}
+            {company.address.postalCode} {company.address.city}
             <br />
             E-mail :{" "}
-            <a href={company.emailHref} className="underline text-brand-blue">
+            <a href={company.emailHref} className="text-brand-blue underline">
               {company.email}
             </a>
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Données collectées</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Données collectées</h2>
           <p>
-            Via le formulaire de contact, nous pouvons collecter : prénom, nom, adresse e-mail,
-            numéro de téléphone et contenu du message.
+            Via le formulaire de demande, nous pouvons collecter : prénom, nom, adresse e-mail,
+            numéro de téléphone, date et heure souhaitées, adresses de départ et d’arrivée, type
+            de trajet, besoin lié au fauteuil roulant, besoin d’accompagnement, ainsi que le
+            contenu du message complémentaire.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Finalités du traitement</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Finalités du traitement</h2>
           <p>
-            Les données sont utilisées uniquement pour répondre à votre demande, organiser une
-            réservation ou un échange commercial lié aux services de transport de {company.name}.
+            Les données sont utilisées pour traiter votre demande, vous recontacter, organiser
+            une éventuelle prise en charge et assurer le suivi commercial lié aux services de
+            transport de {company.name}.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Transmission à des prestataires</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Prestataires techniques</h2>
           <p>
-            L&apos;envoi des messages du formulaire est assuré via le prestataire technique
-            Resend. L&apos;hébergement du site est assuré par Vercel. Ces prestataires traitent
-            les données dans la limite nécessaire à la fourniture de leur service.
+            L’envoi des messages du formulaire est assuré via Resend. L’hébergement du site est
+            assuré par Vercel. Ces prestataires traitent les données dans la limite nécessaire à
+            la fourniture de leur service. Selon leur localisation ou leur infrastructure, des
+            transferts internationaux de données peuvent intervenir dans le cadre de ces
+            prestations techniques.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Base et justification du traitement</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Base du traitement</h2>
           <p>
-            Le traitement repose sur votre demande (prise de contact) et sur l&apos;intérêt
-            légitime de {company.name} à répondre aux sollicitations liées à son activité, dans
-            le respect de la Loi fédérale sur la protection des données (LPD).
+            Le traitement repose sur votre demande (prise de contact / demande de transport) et
+            sur l’intérêt légitime de {company.name} à y répondre, dans le respect de la Loi
+            fédérale sur la protection des données (LPD).
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Conservation</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Conservation</h2>
           <p>
             Les messages et données associées sont conservés uniquement le temps nécessaire au
-            traitement de la demande et aux éventuelles obligations légales ou comptables
-            applicables.
+            traitement de la demande, au suivi éventuel de la relation, et aux obligations
+            légales ou comptables applicables.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Sécurité</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Sécurité</h2>
           <p>
             Des mesures techniques et organisationnelles appropriées sont mises en œuvre pour
-            protéger les données contre l&apos;accès non autorisé, la perte ou l&apos;altération,
-            dans la mesure des moyens raisonnables disponibles.
+            protéger les données contre l’accès non autorisé, la perte ou l’altération, dans la
+            mesure des moyens raisonnables disponibles.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Droits des personnes</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Vos droits</h2>
           <p>
-            Vous pouvez demander l&apos;accès, la rectification ou la suppression de vos données
+            Vous pouvez demander l’accès, la rectification ou la suppression de vos données
             personnelles, dans les limites prévues par la LPD, en nous contactant à{" "}
-            <a href={company.emailHref} className="underline text-brand-blue">
+            <a href={company.emailHref} className="text-brand-blue underline">
               {company.email}
             </a>
-            .
+            . Nous traiterons votre demande dans un délai raisonnable.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Cookies et stockage local</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Cookies et stockage local</h2>
           <p>
-            La version actuelle du site n&apos;utilise pas d&apos;outil d&apos;analytique ni de
-            cookies publicitaires. Un stockage local du navigateur peut être utilisé uniquement
-            pour mémoriser que vous avez pris connaissance de la bannière d&apos;information.
+            La version actuelle du site n’utilise pas d’outil d’analytique ni de cookies
+            publicitaires. Un stockage local du navigateur peut être utilisé uniquement pour
+            mémoriser que vous avez pris connaissance de la bannière d’information.
           </p>
         </section>
 
         <section>
-          <h2 className="mb-2 text-xl font-medium">Modifications</h2>
+          <h2 className="mb-2 text-xl font-semibold text-brand-blue">Modifications</h2>
           <p>
-            Cette déclaration peut être mise à jour afin de refléter l&apos;évolution du site ou
-            des exigences légales. La version publiée sur cette page fait foi.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="mb-2 text-xl font-medium">Contact</h2>
-          <p>
-            Pour toute question relative à la protection des données :{" "}
-            <a href={company.emailHref} className="underline text-brand-blue">
-              {company.email}
-            </a>
-            .
+            Cette déclaration peut être mise à jour afin de refléter l’évolution du site ou des
+            exigences légales. La version publiée sur cette page, avec sa date de mise à jour,
+            fait foi.
           </p>
         </section>
 
         <p>
           Voir aussi les{" "}
-          <Link href="/mentions-legales" className="underline text-brand-blue">
+          <Link href="/mentions-legales" className="text-brand-blue underline">
             mentions légales
           </Link>
           .

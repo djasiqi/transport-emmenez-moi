@@ -2,40 +2,141 @@
 
 :root {
   --brand-blue: #015291;
-  --brand-blue-mid: #205391;
+  --brand-blue-mid: #0a5f9e;
   --brand-blue-soft: #7cacc4;
-  --brand-brown: #463939;
-  --page-bg: #eeeeee;
-  --background: #ffffff;
-  --foreground: #000000;
+  --brand-blue-tint: #e8f2f8;
+  --page-bg: #f7f9fb;
+  --surface: #ffffff;
+  --foreground: #1a2332;
+  --muted: #5a6570;
+  --border: #d8e0e8;
 }
 
 @theme inline {
   --color-brand-blue: var(--brand-blue);
   --color-brand-blue-mid: var(--brand-blue-mid);
   --color-brand-blue-soft: var(--brand-blue-soft);
-  --color-brand-brown: var(--brand-brown);
+  --color-brand-blue-tint: var(--brand-blue-tint);
   --color-page-bg: var(--page-bg);
-  --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-montserrat);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-manrope);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   background: var(--page-bg);
   color: var(--foreground);
-  font-family: var(--font-montserrat), "Montserrat", sans-serif;
-  font-weight: 300;
+  font-family: var(--font-manrope), "Manrope", system-ui, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  font-weight: 400;
 }
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
   outline: 2px solid var(--brand-blue);
-  outline-offset: 2px;
+  outline-offset: 3px;
+}
+
+.section-pad {
+  padding-inline: 1rem;
+  padding-block: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-pad {
+    padding-inline: 1.5rem;
+    padding-block: 4.5rem;
+  }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--brand-blue);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--brand-blue-mid);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--brand-blue);
+  background: #fff;
+  color: var(--brand-blue);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-blue-tint);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  color: var(--brand-blue);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  padding: 1.5rem;
+}
+
+/* Space for mobile call bar */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 4.5rem;
+  }
 }
