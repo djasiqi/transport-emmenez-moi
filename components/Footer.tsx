@@ -76,32 +76,40 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <a
-                href={company.lirieUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex flex-col gap-2.5 rounded-xl border border-white/20 bg-white/95 px-3.5 py-3 shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/logo-lirie.png"
-                  alt="Logo LIRIE"
-                  width={148}
-                  height={64}
-                  className="h-10 w-auto"
-                />
-                <span className="text-sm font-medium leading-snug text-brand-blue-deep group-hover:underline group-hover:underline-offset-2">
-                  Coordination institutionnelle
-                </span>
-              </a>
+              <Link href="/#coordination" className="underline underline-offset-2">
+                Coordination institutionnelle
+              </Link>
             </li>
           </ul>
         </div>
       </div>
 
-      <p className="relative border-t border-white/15 py-5 text-center text-sm text-white/75">
-        © {year} {company.name}. Tous droits réservés.
-      </p>
+      <div className="relative border-t border-white/15">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-4 py-5 sm:flex-row sm:items-center sm:px-6">
+          <p className="text-sm text-white/75">
+            © {year} {company.name}. Tous droits réservés.
+          </p>
+
+          <a
+            href={company.lirieUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 text-sm text-white/70 transition hover:text-white"
+          >
+            <span>Coordination via</span>
+            <span className="inline-flex h-8 items-center rounded-md bg-white px-2.5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo-lirie.png"
+                alt="LIRIE"
+                width={107}
+                height={46}
+                className="h-5 w-auto max-w-none object-contain"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }
