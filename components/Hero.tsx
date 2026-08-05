@@ -84,9 +84,9 @@ export default function Hero() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-white/25 shadow-2xl">
             <Image
               src="/images/hero-transport-pmr.jpg"
-              alt="Véhicule Emmenez-moi pour le transport de personnes à mobilité réduite"
+              alt="Véhicule bleu Emmenez-moi sur les quais de Genève, avec le Jet d’Eau en arrière-plan"
               fill
-              className="object-cover"
+              className="object-cover object-[center_40%]"
               sizes="420px"
               priority
             />

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/hero-transport-pmr.jpg",
-        alt: "Transport accompagné Emmenez-moi pour personnes à mobilité réduite",
+        alt: "Véhicule Emmenez-moi à Genève, Jet d’Eau en arrière-plan",
       },
     ],
   },
