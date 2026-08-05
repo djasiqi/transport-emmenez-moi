@@ -34,14 +34,16 @@ npm run build
 | Variable | Description |
 | --- | --- |
 | `RESEND_API_KEY` | Clé API Resend (serveur uniquement) |
-| `CONTACT_TO_EMAIL` | Destinataire (`info@casa-famiglia.ch`) |
+| `CONTACT_TO_EMAIL` | Destinataire des demandes (`alaoui.khalid@outlook.com`) |
 | `NEXT_PUBLIC_SITE_URL` | URL canonique SEO (optionnelle) |
 
 Ne jamais committer `.env` / `.env.local`.
 
 ## Formulaire
 
-`POST /api/contact` → Resend → `info@casa-famiglia.ch`.
+`POST /api/contact` → Resend → `alaoui.khalid@outlook.com` (configurable via `CONTACT_TO_EMAIL`).
+
+L’email public affiché sur le site reste `info@casa-famiglia.ch`.
 
 Champs : identité, date/heure, adresses, type de trajet, fauteuil, accompagnement, message, consentement protection des données.
 
