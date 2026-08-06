@@ -34,8 +34,9 @@ npm run build
 | Variable | Description |
 | --- | --- |
 | `RESEND_API_KEY` | Clé API Resend (serveur uniquement) |
-| `CONTACT_TO_EMAIL` | Destinataire des demandes (`alaoui.khalid@outlook.com`) |
-| `CONTACT_FROM_EMAIL` | Expéditeur après vérification du domaine (ex. `Emmenez-moi Site Web <contact@transport-emmenez-moi.ch>`) |
+| `CONTACT_TO_EMAIL` | Destinataire principal (`info@casa-famiglia.ch`) |
+| `CONTACT_CC_EMAIL` | Copie (`alaoui.khalid@outlook.com`) |
+| `CONTACT_FROM_EMAIL` | Expéditeur (`Emmenez-moi Site Web <contact@transport-emmenez-moi.ch>`) |
 | `NEXT_PUBLIC_SITE_URL` | URL canonique SEO (optionnelle) |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Code meta Google Search Console (optionnel) |
 
@@ -61,22 +62,9 @@ Ne jamais committer `.env` / `.env.local`.
 
 ## Formulaire
 
-`POST /api/contact` → Resend → `alaoui.khalid@outlook.com` (configurable via `CONTACT_TO_EMAIL`).
+`POST /api/contact` → Resend → `info@casa-famiglia.ch` (TO) + `alaoui.khalid@outlook.com` (CC).
 
-Tant que le domaine n’est pas vérifié dans Resend, l’expéditeur reste `onboarding@resend.dev`.
-
-### DNS Resend (`transport-emmenez-moi.ch`, région Ireland)
-
-À ajouter chez le registrar DNS actuel (**Gandi** pour l’instant), puis cliquer « Verify » dans Resend :
-
-| Type | Nom | Contenu | Priorité |
-| --- | --- | --- | --- |
-| TXT | `resend._domainkey` | `p=MIGf…` (valeur DKIM Resend) | — |
-| MX | `send` | `feedback-smtp.eu-west-1.amazonses.com.` | 10 |
-| TXT | `send` | `v=spf1 include:amazonses.com ~all` | — |
-| TXT | `_dmarc` | `v=DMARC1; p=none;` (optionnel) | — |
-
-Ensuite définir `CONTACT_FROM_EMAIL` sur Vercel et redéployer.
+Expéditeur : `contact@transport-emmenez-moi.ch` (domaine Resend vérifié).
 
 L’email public affiché sur le site reste `info@casa-famiglia.ch`.
 

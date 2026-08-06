@@ -48,6 +48,14 @@ function isDate(value: string): boolean {
   return /^\d{4}-\d{2}-\d{2}$/.test(value);
 }
 
+function parseEmails(value: string | undefined, fallback: string[]): string[] {
+  if (!value?.trim()) return fallback;
+  return value
+    .split(/[,;]+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
 function isTime(value: string): boolean {
   if (!value) return true;
   return /^\d{2}:\d{2}$/.test(value);
@@ -111,11 +119,17 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const toEmail =
-    process.env.CONTACT_TO_EMAIL || "alaoui.khalid@outlook.com";
+  const toEmails = parseEmails(
+    process.env.CONTACT_TO_EMAIL,
+    ["info@casa-famiglia.ch"],
+  );
+  const ccEmails = parseEmails(
+    process.env.CONTACT_CC_EMAIL,
+    ["alaoui.khalid@outlook.com"],
+  ).filter((address) => !toEmails.includes(address));
   const fromEmail =
     process.env.CONTACT_FROM_EMAIL ||
-    "Emmenez-moi Site Web <onboarding@resend.dev>";
+    "Emmenez-moi Site Web <contact@transport-emmenez-moi.ch>";
 
   if (!apiKey) {
     console.error("RESEND_API_KEY is not configured");
@@ -129,7 +143,8 @@ export async function POST(request: Request) {
   try {
     const { error } = await resend.emails.send({
       from: fromEmail,
-      to: [toEmail],
+      to: toEmails,
+      ...(ccEmails.length > 0 ? { cc: ccEmails } : {}),
       replyTo: email,
       subject,
       text: [
