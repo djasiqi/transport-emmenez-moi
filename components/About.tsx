@@ -46,7 +46,7 @@ export default function About() {
           <div className="relative aspect-[5/4] overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)] lg:ml-10 lg:-mt-6">
             <Image
               src="/images/service-accompagnement.jpg"
-              alt="Accompagnement personnalisé lors d’un transport Emmenez-moi"
+              alt="Flotte de véhicules Emmenez-moi équipés pour le transport à mobilité réduite"
               fill
               className="object-cover transition duration-500 hover:scale-[1.03]"
               sizes="(max-width: 1024px) 100vw, 50vw"
