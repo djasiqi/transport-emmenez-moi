@@ -37,7 +37,7 @@ export default function About() {
           <div className="relative aspect-[5/4] overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)]">
             <Image
               src="/images/vehicule-emmenez-moi.jpg"
-              alt="Véhicule Emmenez-moi équipé pour le transport adapté"
+              alt="Véhicule Emmenez-moi pour le transport couché à Genève, brancard et Jet d’Eau en arrière-plan"
               fill
               className="object-cover transition duration-500 hover:scale-[1.03]"
               sizes="(max-width: 1024px) 100vw, 50vw"
