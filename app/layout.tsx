@@ -4,6 +4,7 @@ import CookieBanner from "@/components/CookieBanner";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MobileCallBar from "@/components/MobileCallBar";
+import ProtectImages from "@/components/ProtectImages";
 import { company, siteConfig } from "@/lib/company";
 import "./globals.css";
 
@@ -186,6 +187,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <CookieBanner />
         <MobileCallBar />
+        <ProtectImages />
       </body>
     </html>
   );

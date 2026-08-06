@@ -64,6 +64,14 @@ body {
   font-weight: 400;
 }
 
+img,
+picture {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
