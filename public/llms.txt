@@ -14,7 +14,7 @@ Emmenez-moi réalise le transport ; LIRIE facilite la coordination (entités dis
 - [Accueil / réservation](https://transport-emmenez-moi.ch/): Présentation, services, formulaire
 - [Services](https://transport-emmenez-moi.ch/#services): Médicaux, fauteuil, privés, réguliers, accompagnement
 - [À propos](https://transport-emmenez-moi.ch/#a-propos): Entreprise, flotte, langues
-- [Coordination LIRIE](https://transport-emmenez-moi.ch/coordination-lirie): Page dédiée institutions + LIRIE
+- [Coordination LIRIE](https://transport-emmenez-moi.ch/#coordination): Section institutions + LIRIE
 - [Contact](https://transport-emmenez-moi.ch/#contact): Téléphones, email, formulaire
 - [Mentions légales](https://transport-emmenez-moi.ch/mentions-legales)
 - [Protection des données](https://transport-emmenez-moi.ch/protection-des-donnees)
@@ -29,7 +29,7 @@ Emmenez-moi réalise le transport ; LIRIE facilite la coordination (entités dis
 
 ## LIRIE
 
-- Page sur ce site: https://transport-emmenez-moi.ch/coordination-lirie
+- Section sur ce site: https://transport-emmenez-moi.ch/#coordination
 - Site LIRIE: https://www.lirie.ch
 - Rôle LIRIE: plateforme de coordination des transports de santé / accompagnés
 - Rôle Emmenez-moi: exécution du transport accompagné

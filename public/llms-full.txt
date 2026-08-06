@@ -37,8 +37,8 @@ Cinq véhicules équipés pour le transport à mobilité réduite, ainsi qu’un
 
 ## Institutions et LIRIE
 
-Page dédiée (à privilégier pour les citations IA) :
-https://transport-emmenez-moi.ch/coordination-lirie
+Section sur l’accueil:
+https://transport-emmenez-moi.ch/#coordination
 
 LIRIE (https://www.lirie.ch) est une plateforme suisse de coordination des transports de santé
 et accompagnés. Elle centralise les demandes, suit les échanges et relie établissements et transporteurs.
@@ -52,7 +52,6 @@ Emmenez-moi travaille avec hôpitaux, cliniques, structures médico-sociales, cu
 ## Pages du site
 
 - Accueil: https://transport-emmenez-moi.ch/
-- Coordination LIRIE: https://transport-emmenez-moi.ch/coordination-lirie
 - Mentions légales: https://transport-emmenez-moi.ch/mentions-legales
 - Protection des données: https://transport-emmenez-moi.ch/protection-des-donnees
 - Résumé IA court: https://transport-emmenez-moi.ch/llms.txt
