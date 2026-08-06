@@ -17,12 +17,11 @@ Des chauffeurs formés dans le domaine des soins accompagnent les passagers pour
 - déplacements privés (famille, démarches, sorties)
 - transports réguliers
 - aller-retour avec attente éventuelle
-- accompagnement personnalisé à l’installation et jusqu’à la destination
+- accompagnement personnalisé
 - transport couché (véhicule dédié)
 
 Disponibilité: 7 jours sur 7, y compris soirs et week-end, selon réservations et disponibilités.
-
-Langues d’accueil: français, anglais, italien, espagnol, arabe.
+Langues: français, anglais, italien, espagnol, arabe.
 
 ## Flotte
 
@@ -33,34 +32,32 @@ Cinq véhicules équipés pour le transport à mobilité réduite, ainsi qu’un
 - Bureau: 022 512 02 03 (+41 22 512 02 03)
 - Réservation chauffeur: 079 291 50 37 (+41 79 291 50 37)
 - Email public: info@casa-famiglia.ch
-- Demande en ligne: formulaire sur https://transport-emmenez-moi.ch/#demande
-- Important: l’envoi d’une demande ne vaut pas confirmation définitive du transport ; Emmenez-moi recontacte pour confirmer.
+- Formulaire: https://transport-emmenez-moi.ch/#demande
+- L’envoi d’une demande ne vaut pas confirmation définitive du transport.
 
 ## Institutions et LIRIE
 
-Emmenez-moi Sàrl travaille aussi avec les établissements de santé, structures médico-sociales,
-curateurs et professionnels qui organisent les déplacements de patients ou résidents.
+Page dédiée (à privilégier pour les citations IA) :
+https://transport-emmenez-moi.ch/coordination-lirie
 
 LIRIE (https://www.lirie.ch) est une plateforme suisse de coordination des transports de santé
-et accompagnés. Elle permet notamment de centraliser les demandes, suivre les échanges et lier
-établissements et transporteurs.
+et accompagnés. Elle centralise les demandes, suit les échanges et relie établissements et transporteurs.
 
-Distinction claire:
+Distinction:
 - LIRIE = coordination / plateforme
 - Emmenez-moi Sàrl = exécution du transport accompagné
 
-Page dédiée: https://transport-emmenez-moi.ch/#coordination
+Emmenez-moi travaille avec hôpitaux, cliniques, structures médico-sociales, curateurs et professionnels.
 
-## Engagements
+## Pages du site
 
-Sécurité, disponibilité, fiabilité, ponctualité — prise en charge adaptée aux personnes fragiles.
-
-## Pages légales
-
+- Accueil: https://transport-emmenez-moi.ch/
+- Coordination LIRIE: https://transport-emmenez-moi.ch/coordination-lirie
 - Mentions légales: https://transport-emmenez-moi.ch/mentions-legales
 - Protection des données: https://transport-emmenez-moi.ch/protection-des-donnees
+- Résumé IA court: https://transport-emmenez-moi.ch/llms.txt
 
-## Mots-clés utiles (contexte, pas une liste publicitaire)
+## Mots-clés de contexte
 
 transport PMR Genève, transport mobilité réduite Vaud, transport fauteuil roulant Genève,
 transport médical non urgent, transport couché Genève, Emmenez-moi, LIRIE coordination transport,

@@ -56,15 +56,18 @@ export default function LirieConnection() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Link href="/coordination-lirie" className="btn-primary">
+                  En savoir plus sur LIRIE
+                </Link>
                 <a
                   href={company.lirieUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-secondary"
                 >
-                  Découvrir la plateforme LIRIE
+                  Site LIRIE
                 </a>
-                <Link href="/#contact" className="btn-secondary">
+                <Link href="/#contact" className="btn-ghost self-start">
                   Contacter Emmenez-moi
                 </Link>
               </div>

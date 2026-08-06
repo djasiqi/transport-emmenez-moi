@@ -6,16 +6,15 @@ Emmenez-moi Sàrl est une entreprise genevoise fondée en 2019, basée à Anièr
 Elle propose un transport accompagné avec chauffeurs formés dans le domaine des soins,
 véhicules adaptés (fauteuil roulant, transport couché), 7 jours sur 7.
 
-Pour les institutions de santé, la coordination des demandes peut aussi passer par LIRIE
-(https://www.lirie.ch), une plateforme suisse distincte. Emmenez-moi réalise le transport ;
-LIRIE facilite la coordination.
+Pour les institutions, la coordination peut aussi passer par LIRIE.
+Emmenez-moi réalise le transport ; LIRIE facilite la coordination (entités distinctes).
 
 ## Pages principales
 
-- [Accueil / réservation](https://transport-emmenez-moi.ch/): Présentation, services, formulaire de demande
-- [Services](https://transport-emmenez-moi.ch/#services): Rendez-vous médicaux, fauteuil, privés, réguliers, aller-retour, accompagnement
+- [Accueil / réservation](https://transport-emmenez-moi.ch/): Présentation, services, formulaire
+- [Services](https://transport-emmenez-moi.ch/#services): Médicaux, fauteuil, privés, réguliers, accompagnement
 - [À propos](https://transport-emmenez-moi.ch/#a-propos): Entreprise, flotte, langues
-- [Coordination LIRIE](https://transport-emmenez-moi.ch/#coordination): Lien institutions ↔ transporteur via LIRIE
+- [Coordination LIRIE](https://transport-emmenez-moi.ch/coordination-lirie): Page dédiée institutions + LIRIE
 - [Contact](https://transport-emmenez-moi.ch/#contact): Téléphones, email, formulaire
 - [Mentions légales](https://transport-emmenez-moi.ch/mentions-legales)
 - [Protection des données](https://transport-emmenez-moi.ch/protection-des-donnees)
@@ -27,16 +26,16 @@ LIRIE facilite la coordination.
 - Email: info@casa-famiglia.ch
 - Adresse: Route de Chevrens 145, 1247 Anières, Suisse
 - Site: https://transport-emmenez-moi.ch
-- Site Vercel: https://transport-emmenez-moi.vercel.app
 
-## LIRIE (partenaire de coordination)
+## LIRIE
 
-- Site: https://www.lirie.ch
-- Rôle: plateforme de coordination des transports de santé / accompagnés
-- Rôle d’Emmenez-moi: entreprise de transport qui exécute les courses
+- Page sur ce site: https://transport-emmenez-moi.ch/coordination-lirie
+- Site LIRIE: https://www.lirie.ch
+- Rôle LIRIE: plateforme de coordination des transports de santé / accompagnés
+- Rôle Emmenez-moi: exécution du transport accompagné
 
-## Fichiers utiles
+## Fichiers utiles pour IA
 
-- [llms-full.txt](https://transport-emmenez-moi.ch/llms-full.txt): description détaillée
+- [llms-full.txt](https://transport-emmenez-moi.ch/llms-full.txt): fiche détaillée
 - [sitemap.xml](https://transport-emmenez-moi.ch/sitemap.xml)
 - [robots.txt](https://transport-emmenez-moi.ch/robots.txt)

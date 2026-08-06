@@ -26,7 +26,7 @@ export default function Institutions() {
             <Link href="/#contact" className="btn-primary">
               Échanger sur vos besoins
             </Link>
-            <Link href="/#coordination" className="btn-secondary">
+            <Link href="/coordination-lirie" className="btn-secondary">
               Voir la coordination LIRIE
             </Link>
           </div>

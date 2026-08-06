@@ -76,8 +76,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/#coordination" className="underline underline-offset-2">
-                Coordination institutionnelle
+              <Link href="/coordination-lirie" className="underline underline-offset-2">
+                Coordination LIRIE
               </Link>
             </li>
           </ul>
