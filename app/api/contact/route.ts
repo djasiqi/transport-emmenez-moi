@@ -113,6 +113,9 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   const toEmail =
     process.env.CONTACT_TO_EMAIL || "alaoui.khalid@outlook.com";
+  const fromEmail =
+    process.env.CONTACT_FROM_EMAIL ||
+    "Emmenez-moi Site Web <onboarding@resend.dev>";
 
   if (!apiKey) {
     console.error("RESEND_API_KEY is not configured");
@@ -125,7 +128,7 @@ export async function POST(request: Request) {
 
   try {
     const { error } = await resend.emails.send({
-      from: "Emmenez-moi Site Web <onboarding@resend.dev>",
+      from: fromEmail,
       to: [toEmail],
       replyTo: email,
       subject,
