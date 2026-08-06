@@ -37,6 +37,25 @@ npm run build
 | `CONTACT_TO_EMAIL` | Destinataire des demandes (`alaoui.khalid@outlook.com`) |
 | `CONTACT_FROM_EMAIL` | Expéditeur après vérification du domaine (ex. `Emmenez-moi Site Web <contact@transport-emmenez-moi.ch>`) |
 | `NEXT_PUBLIC_SITE_URL` | URL canonique SEO (optionnelle) |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Code meta Google Search Console (optionnel) |
+
+## Référencement Google & IA
+
+Fichiers publics :
+
+| URL | Usage |
+| --- | --- |
+| `/robots.txt` | Règles crawlers (Google, Bing, GPTBot, ClaudeBot, etc.) |
+| `/sitemap.xml` | Plan du site pour Google Search Console |
+| `/llms.txt` | Résumé structuré pour assistants / recherche IA |
+| `/llms-full.txt` | Fiche détaillée Emmenez-moi + lien LIRIE |
+
+Après propagation DNS du domaine `.ch` :
+
+1. [Google Search Console](https://search.google.com/search-console) → ajouter `https://transport-emmenez-moi.ch`
+2. Vérifier la propriété (meta tag → coller le code dans `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` sur Vercel, ou fichier HTML)
+3. Soumettre `https://transport-emmenez-moi.ch/sitemap.xml`
+4. Demander l’indexation de la page d’accueil
 
 Ne jamais committer `.env` / `.env.local`.
 
