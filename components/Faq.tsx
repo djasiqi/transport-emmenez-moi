@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "Transportez-vous les personnes en fauteuil roulant ?",
-    a: "L’entreprise dispose d’un véhicule adapté à certaines prises en charge en fauteuil roulant. Les dimensions du fauteuil et les besoins du passager doivent être précisés lors de la réservation.",
+    a: "Oui. Nos véhicules sont équipés pour le transport à mobilité réduite, y compris en fauteuil roulant. Les dimensions du fauteuil et les besoins du passager doivent être précisés lors de la réservation.",
   },
   {
     q: "Peut-on réserver un aller-retour ?",

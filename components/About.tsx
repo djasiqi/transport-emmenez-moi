@@ -16,8 +16,8 @@ export default function About() {
             le canton de Vaud.
           </p>
           <p className="text-lg leading-relaxed text-muted">
-            Notre flotte comprend deux véhicules, dont un véhicule spécialement équipé pour
-            certaines prises en charge nécessitant un transport adapté.
+            Notre flotte compte cinq véhicules, tous équipés pour le transport à mobilité
+            réduite, ainsi qu’un véhicule permettant le transport couché.
           </p>
           <p className="text-lg leading-relaxed text-muted">
             Nos chauffeurs, issus du domaine des soins, accordent une attention particulière à

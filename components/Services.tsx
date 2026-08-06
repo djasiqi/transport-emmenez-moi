@@ -14,7 +14,7 @@ const services: {
   {
     slug: "fauteuil",
     title: "Transport en fauteuil roulant",
-    text: "Prise en charge adaptée des personnes se déplaçant en fauteuil roulant, selon les caractéristiques du véhicule et les besoins communiqués lors de la réservation.",
+    text: "Prise en charge adaptée des personnes se déplaçant en fauteuil roulant, avec une flotte équipée pour le transport à mobilité réduite. Les besoins sont précisés lors de la réservation.",
   },
   {
     slug: "prives",
