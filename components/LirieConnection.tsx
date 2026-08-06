@@ -4,21 +4,21 @@ import { company } from "@/lib/company";
 const points = [
   {
     title: "Demandes centralisées",
-    text: "Une seule plateforme pour transmettre les trajets et les informations utiles.",
+    text: "Une seule plateforme pour transmettre les trajets et les informations utiles entre établissements et transporteurs.",
   },
   {
-    title: "Suivi clair",
-    text: "Les échanges et l’avancement restent accessibles aux acteurs habilités.",
+    title: "Suivi et traçabilité",
+    text: "Les échanges et l’avancement restent accessibles aux acteurs habilités tout au long de la mission.",
   },
   {
-    title: "Rôles distincts",
-    text: "LIRIE coordonne ; Emmenez-moi\u00A0Sàrl réalise le transport accompagné.",
+    title: "Rôles clairement séparés",
+    text: "LIRIE assure la coordination ; Emmenez-moi\u00A0Sàrl réalise le transport accompagné sur le terrain.",
   },
 ] as const;
 
 export default function LirieConnection() {
   return (
-    <section id="coordination" className="section-pad scroll-mt-24">
+    <section id="coordination" className="section-pad scroll-mt-24" aria-labelledby="coordination-title">
       <div className="mx-auto max-w-6xl">
         <div className="relative overflow-hidden rounded-[1.75rem] border border-border bg-white">
           <div
@@ -29,12 +29,26 @@ export default function LirieConnection() {
           <div className="relative grid gap-10 p-8 sm:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12 lg:p-12">
             <div>
               <p className="section-kicker">Pour les institutions</p>
-              <h2 className="section-title">Coordination simplifiée avec LIRIE</h2>
+              <h2 id="coordination-title" className="section-title">
+                Coordination des transports avec LIRIE
+              </h2>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
-                Emmenez-moi&nbsp;Sàrl s’appuie aussi sur{" "}
-                <span className="font-semibold text-foreground">LIRIE</span>, une plateforme
-                suisse qui facilite les échanges entre établissements de santé et entreprises de
-                transport.
+                Emmenez-moi&nbsp;Sàrl collabore avec{" "}
+                <a
+                  href={company.lirieUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-brand-blue underline decoration-brand-blue/30 underline-offset-2 hover:decoration-brand-blue"
+                >
+                  LIRIE
+                </a>
+                , une plateforme suisse de coordination des transports de santé et accompagnés en
+                Suisse romande.
+              </p>
+              <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">
+                Pour les hôpitaux, cliniques, structures médico-sociales et professionnels, LIRIE
+                facilite la centralisation des demandes, le suivi des échanges et le lien avec les
+                entreprises de transport partenaires.
               </p>
               <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">
                 Le transport reste assuré par Emmenez-moi&nbsp;Sàrl, selon les modalités convenues
@@ -48,7 +62,7 @@ export default function LirieConnection() {
                   rel="noopener noreferrer"
                   className="btn-primary"
                 >
-                  Découvrir LIRIE
+                  Découvrir la plateforme LIRIE
                 </a>
                 <Link href="/#contact" className="btn-secondary">
                   Contacter Emmenez-moi
